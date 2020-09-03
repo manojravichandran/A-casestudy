@@ -1,1 +1,16 @@
 <p>employee-detail works!</p>
+
+{{example}}
+<div style="margin-left: 30%;background-color: springgreen; margin-right: 20%; padding-left:1% ; padding-top: 2%;padding-bottom: 3%;">
+    <label style="margin-left: 40%; margin-top: 3%;">
+        Employee Details
+    </label>
+    <ul *ngFor="let obj of edata;">
+        <div *ngIf="obj.id==example">
+
+            <li>ID : {{obj.id}}</li>
+            <li>Name : {{obj.name}}</li>
+            <li>Age : {{obj.age}}</li>
+        </div>
+    </ul>
+</div>
