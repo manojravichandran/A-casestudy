@@ -3,14 +3,14 @@
 </div>
 <label style="padding-left: 48%;font-size:xx-large;">Login</label>
 
-<div class="container">
+<div class="container" style="padding-left: 20%;padding-right: 20%;">
 
-    <form #userlogin="ngForm" (ngSubmit)="onClickSubmit(userlogin.value)">
+    <form #userlogin="ngForm" (ngSubmit)="onClickSubmit(userlogin.value) ">
         <input type="text" name="email" placeholder="User ID" ngModel autocomplete="off">
         <br/>
         <input type="password" name="passwd" placeholder="Password" ngModel>
         <br/>
-        <input type="submit" id="button" value="submit">
+        <input type="submit" id="button" value="Login">
     </form>
     <br><br>
 </div>
