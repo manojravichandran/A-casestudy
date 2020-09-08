@@ -13,9 +13,10 @@
     </label>
     <ul *ngFor="let obj of editdata;">
         <div *ngIf="obj.id==examples">
-            <form>
 
-                Name : <input type="text" id="check" value="{{obj.name}}"> <br> Last Name : <input type="text" id="check" value="{{obj.lname}}"> <br> Age : <input type="text" id="check" value="{{obj.age}}"><br> Dob : <input type="text" id="check" value="{{obj.dob}}"><br>                Gender : <input type="text" id="check" value="{{obj.Gender}}"><br> Phone : <input type="text" id="check" value="{{obj.Phno}}"><br>
+            <form onsubmit='return onSubmit(this)'>
+
+                <br> Name : <input style="margin-top: 2%;" type="text" id="check" value="{{obj.name}}"> <br> <br>Last Name : <input type="text" id="check" value="{{obj.lname}}"> <br> <br> Age : <input type="text" id="check" value="{{obj.age}}"><br> <br>                Dob : <input type="text" id="check" value="{{obj.dob}}"><br> <br>Gender : <input type="text" id="check" value="{{obj.Gender}}"><br> <br>Phone : <input type="text" id="check" value="{{obj.Phno}}"><br>
 
             </form>
 
@@ -23,5 +24,11 @@
 
         </div>
     </ul>
+    <a routerLink="/home" routerLinkActive="active" style="margin-left: 50%;padding-top: 10%;"> <button class="btn btn-sm text-white btn-primary"> 
+        
+    
+        Update
+    
+    </button></a>
 </div>
 <br><br>

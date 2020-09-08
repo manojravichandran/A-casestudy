@@ -4,12 +4,13 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import {AuthGuardService} from "./auth-guard.service";
 
 
 const routes: Routes = [
-  {path:'', component:LoginComponent},
-  { path:'home',component:HomeComponent},
+  {path:"", component:LoginComponent},
   { path:'edetails',component:EmployeeDetailComponent},
+  { path:'home',component:HomeComponent},
   { path:'elist',component:EmployeeListComponent}
 ];
 

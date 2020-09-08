@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   onClickSubmit(data) {
     if(data.email=="admin" && data.passwd=="admin")
     {
-     this.router.navigate(['/home']);
+     this.router.navigateByUrl('/home');
     
     }
     else

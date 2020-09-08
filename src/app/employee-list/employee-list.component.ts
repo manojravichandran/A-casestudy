@@ -29,5 +29,6 @@ export class EmployeeListComponent implements OnInit {
     this.editdata=this._service.getEmployees();
 
   }
+  
 
 }

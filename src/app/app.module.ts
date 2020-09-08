@@ -14,12 +14,16 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
 
 
 import {EmployeeService} from './employees.service';
+import {AuthService} from './auth.service';
+import {AuthGuardService} from './auth-guard.service';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     routingcomponents,
+    HomeComponent,
     HeaderComponent,
     EmployeeListComponent,
     EmployeeDetailComponent
@@ -36,7 +40,7 @@ import {EmployeeService} from './employees.service';
       preventDuplicates:false
     })
   ],
-  providers: [EmployeeService],
+  providers: [EmployeeService,AuthGuardService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
