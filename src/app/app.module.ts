@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {ToastrModule} from 'ngx-toastr';
 
 import { FormsModule } from '@angular/forms';
 
@@ -27,7 +28,13 @@ import {EmployeeService} from './employees.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot({
+      timeOut:500,
+      positionClass:'toast-top-right',
+
+      preventDuplicates:false
+    })
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]

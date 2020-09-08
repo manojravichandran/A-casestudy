@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import { EmployeeService } from '../employees.service';
+
 
 @Component({
   selector: 'app-employee-list',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeListComponent implements OnInit {
 
-  constructor() { }
+  
+  examples:string;
+  public editdata=[];  
+
+  constructor(private router: Router,private _service:EmployeeService) { 
+
+        
+    const navigation = this.router.getCurrentNavigation();
+    const state = navigation.extras.state as {example: string};
+    this.examples = state.example;
+
+
+  }
 
   ngOnInit(): void {
+
+    this.editdata=this._service.getEmployees();
+
   }
 
 }

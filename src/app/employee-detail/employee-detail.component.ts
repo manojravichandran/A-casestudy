@@ -30,4 +30,6 @@ export class EmployeeDetailComponent implements OnInit {
 
   }
 
+ 
+
 }

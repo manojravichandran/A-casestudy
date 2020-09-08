@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+//import { FormsModule } from '@angular/forms';
 import {Router} from '@angular/router';
 @Component({
   selector: 'app-login',
@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   onClickSubmit(data) {
     if(data.email=="admin" && data.passwd=="admin")
     {
-     this.router.navigateByUrl('/home');
+     this.router.navigate(['/home']);
     
     }
     else

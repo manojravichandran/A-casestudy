@@ -1,3 +1,11 @@
+<a style="margin-left: 90%;" class="btn btn-sm text-white btn-danger" (click)="out()">Logout</a>
+
+
+<div style="padding-left: 40%;padding-right: 40%; padding-bottom: 2%;" class="container">
+
+
+</div>
+
 <table border="2" align="center" class="table-primary">
     <tr>
         <td>Id </td>
@@ -11,7 +19,7 @@
         <td>{{obj.id}}</td>
         <td>{{obj.name}}</td>
         <td>{{obj.age}}</td>
-        <td><a class="btn btn-sm text-white btn-primary" (click)="view(obj.id)">View</a></td>
+        <td><a class="btn btn-sm text-white btn-primary" id="mydialog" (click)="view(obj.id)">View</a></td>
         <td><a class="btn btn-sm text-white btn-danger" (click)="delete(obj.id)">Delete</a></td>
         <td><a class="btn btn-sm text-white btn-success" (click)="edit(obj.id)">Edit</a></td>
     </tr>
