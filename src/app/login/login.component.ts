@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 //import { FormsModule } from '@angular/forms';
 import {Router} from '@angular/router';
+import {AuthService} from './../auth.service';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,7 +11,7 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private authservice :AuthService) { }
 
   ngOnInit(): void {
   }
@@ -17,6 +20,7 @@ export class LoginComponent implements OnInit {
   onClickSubmit(data) {
     if(data.email=="admin" && data.passwd=="admin")
     {
+      this.authservice.onlogIn();
      this.router.navigateByUrl('/home');
     
     }
