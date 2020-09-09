@@ -1,27 +1,30 @@
-<div class="container">
+<router-outlet>
 
-    <a style="margin-left: 90%;" class="btn btn-sm text-white btn-danger" (click)="out()">Logout</a>
+    <div class="container">
+
+        <a style="margin-left: 90%;" class="btn btn-sm text-white btn-danger" (click)="out()">Logout</a>
 
 
 
 
-    <table border="2" align="center" class="table-primary">
-        <tr>
-            <td>Id </td>
-            <td>Name</td>
-            <td>Age</td>
-            <td>View</td>
-            <td>Delete</td>
-            <td>Edit</td>
-        </tr>
-        <tr *ngFor="let obj of data;">
-            <td>{{obj.id}}</td>
-            <td>{{obj.name}}</td>
-            <td>{{obj.age}}</td>
-            <td><a class="btn btn-sm text-white btn-primary" id="mydialog" (click)="view(obj.id)">View</a></td>
-            <td><a class="btn btn-sm text-white btn-danger" (click)="delete(obj.id)">Delete</a></td>
-            <td><a class="btn btn-sm text-white btn-success" (click)="edit(obj.id)">Edit</a></td>
-        </tr>
-    </table>
-</div>
-<br><br>
+        <table border="2" align="center" class="table-primary">
+            <tr>
+                <td>Id </td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>View</td>
+                <td>Delete</td>
+                <td>Edit</td>
+            </tr>
+            <tr *ngFor="let obj of data;">
+                <td>{{obj.id}}</td>
+                <td>{{obj.name}}</td>
+                <td>{{obj.age}}</td>
+                <td><a class="btn btn-sm text-white btn-primary" id="mydialog" (click)="view(obj.id)">View</a></td>
+                <td><a class="btn btn-sm text-white btn-danger" (click)="delete(obj.id)">Delete</a></td>
+                <td><a class="btn btn-sm text-white btn-success" (click)="edit(obj.id)">Edit</a></td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+</router-outlet>

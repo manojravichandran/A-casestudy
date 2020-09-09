@@ -14,21 +14,48 @@
     <ul *ngFor="let obj of editdata;">
         <div *ngIf="obj.id==examples">
 
-            <form onsubmit='return onSubmit(this)'>
 
-                <br> Name : <input style="margin-top: 2%;" type="text" id="check" value="{{obj.name}}"> <br> <br>Last Name : <input type="text" id="check" value="{{obj.lname}}"> <br> <br> Age : <input type="text" id="check" value="{{obj.age}}"><br> <br>                Dob : <input type="text" id="check" value="{{obj.dob}}"><br> <br>Gender : <input type="text" id="check" value="{{obj.Gender}}"><br> <br>Phone : <input type="text" id="check" value="{{obj.Phno}}"><br>
 
+            <form style="margin-right: 2%;" onsubmit='return onSubmit(this)'>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp" value="{{obj.name}}">
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Last Name</label>
+                    <input type="text" class="form-control" value="{{obj.lname}}">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Age</label>
+                    <input type="number" class="form-control" value="{{obj.age}}">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Gender</label>
+                    <input type="text" class="form-control" value="{{obj.Gender}}">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Date of Birth</label>
+                    <input type="text" class="form-control" value="{{obj.dob}}">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Phone Number</label>
+                    <input type="text" class="form-control" value="{{obj.Phno}}">
+                </div>
+
+                <a routerLink="/home" routerLinkActive="active" style="margin-left: 50%;padding-top: 10%;"> <button class="btn btn-sm text-white btn-primary"> 
+        
+    
+                    Update
+                
+                </button></a>
             </form>
+
 
 
 
         </div>
     </ul>
-    <a routerLink="/home" routerLinkActive="active" style="margin-left: 50%;padding-top: 10%;"> <button class="btn btn-sm text-white btn-primary"> 
-        
-    
-        Update
-    
-    </button></a>
+
 </div>
 <br><br>

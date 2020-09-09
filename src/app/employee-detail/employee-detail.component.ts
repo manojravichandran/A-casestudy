@@ -30,6 +30,8 @@ export class EmployeeDetailComponent implements OnInit {
 
   }
 
- 
+ nav(){
+   this.router.navigateByUrl("/home");
+ }
 
 }

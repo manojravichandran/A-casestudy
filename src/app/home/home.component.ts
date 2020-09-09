@@ -25,14 +25,14 @@ export class HomeComponent implements OnInit {
 //window.alert(data)
 
   const navigationExtras: NavigationExtras = {state: {example: data}};
-    this.route.navigate(['/edetails'], navigationExtras);
+    this.route.navigate(['/home/edetails'], navigationExtras);
 }
 
 edit(edata)
 
 {
   const navigationExtras: NavigationExtras = {state: {example: edata}};
-  this.route.navigate(['/elist'], navigationExtras);
+  this.route.navigate(['/home/elist'], navigationExtras);
 
 }
 
