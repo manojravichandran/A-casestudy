@@ -12,6 +12,7 @@ import {ToastrService} from 'ngx-toastr';
 export class HomeComponent implements OnInit {
 
   public data=[];
+  public empid;
 
   constructor( private _service:EmployeeService,private route:Router,private toastr:ToastrService) { }
 
@@ -20,12 +21,15 @@ export class HomeComponent implements OnInit {
     this.data=this._service.getEmployees();
 
   }
-  view(data){
+  view(datas){
     //this.route.navigate(['/edetails'], { state: { example: 'data' } });
 //window.alert(data)
 
-  const navigationExtras: NavigationExtras = {state: {example: data}};
-    this.route.navigate(['/home/edetails'], navigationExtras);
+  // const navigationExtras: NavigationExtras = {state: {example: data}};
+  //   this.route.navigate(['/home/edetails'], navigationExtras);
+this.empid=datas;
+console.log(this.empid);
+
 }
 
 edit(edata)

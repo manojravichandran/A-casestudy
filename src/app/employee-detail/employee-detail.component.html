@@ -1,7 +1,4 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-
-<div style="margin-left: 30%;background-color: rgb(242, 192, 248); margin-right: 20%; padding-left:1% ; padding-top: 2%;padding-bottom: 3%;">
+<!---<div style="margin-left: 30%;background-color: rgb(242, 192, 248); margin-right: 20%; padding-left:1% ; padding-top: 2%;padding-bottom: 3%;">
     <button class="btn btn-sm text-white btn-danger" (click)="nav()" style="margin-left: 90%;"> 
         
     
@@ -32,3 +29,41 @@
 
 </div>
 <br><br>
+-->
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Modal
+  </button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+
+                <ul *ngFor="let obj of edata;">
+                    <div *ngIf="obj.id==empid">
+
+                        <li>ID : {{obj.id}}</li>
+                        <li>First Name : {{obj.name}}</li>
+                        <li>Last Name : {{obj.lname}}</li>
+                        <li>Age : {{obj.age}}</li>
+                        <li>Date of Birth : {{obj.dob | date:"MM/dd/yy" }}</li>
+                        <li>Gender : {{obj.Gender | uppercase }}</li>
+                        <li>Salary : {{obj.salary | currency:"USD" }}</li>
+                        <li>Phone Number : {{obj.Phno}}</li>
+                    </div>
+
+                </ul>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

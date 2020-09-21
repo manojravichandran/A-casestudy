@@ -10,7 +10,7 @@ import {AuthGuardService} from "./auth-guard.service";
 const routes: Routes = [
   {path:"", component:LoginComponent},
   { path:'home',component:HomeComponent,canActivate:[AuthGuardService]},
-  { path:'home/edetails',component:EmployeeDetailComponent},
+  //{ path:'home/edetails',component:EmployeeDetailComponent},
   { path:'home/elist',component:EmployeeListComponent}
 ];
 
@@ -19,4 +19,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingcomponents=[HomeComponent,LoginComponent,EmployeeDetailComponent,EmployeeListComponent]
+export const routingcomponents=[HomeComponent,LoginComponent,//EmployeeDetailComponent,
+  EmployeeListComponent]

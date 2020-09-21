@@ -9,7 +9,7 @@ import { EmployeeService } from '../employees.service';
   styleUrls: ['./employee-detail.component.css']
 })
 export class EmployeeDetailComponent implements OnInit {
-
+@Input() empid;
   example:string;
   public edata=[];  
   
@@ -17,9 +17,9 @@ export class EmployeeDetailComponent implements OnInit {
 
   
     
-      const navigation = this.router.getCurrentNavigation();
-      const state = navigation.extras.state as {example: string};
-      this.example = state.example;
+      // const navigation = this.router.getCurrentNavigation();
+      // const state = navigation.extras.state as {example: string};
+      // this.example = state.example;
     }
     
 
@@ -30,8 +30,9 @@ export class EmployeeDetailComponent implements OnInit {
 
   }
 
+  
  nav(){
-   this.router.navigateByUrl("/home");
+   //this.router.navigateByUrl("/home");
  }
 
 }
